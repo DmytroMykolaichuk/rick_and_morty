@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Link from "next/link";
+import { Schoolbell } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
+import Header from "@/components/Header/Header";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const schoolbell = Schoolbell({ subsets: ["latin"],weight:['400'] });
 
 export const metadata: Metadata = {
   title: "Rick and Morty",
@@ -19,18 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
-      <body className={inter.className}>
-        <header>
-          <Link href='/'>Home</Link>
-          <Link href='/seasons'>Seasons</Link>
-          <Link href='/characters'>Characters</Link>
-          <Link href='/locations'>Locations</Link>
-        </header>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        {children}
+      <body className={schoolbell.className}>
+        <Header/>      
+        <main>
+          <div className="container">{children}</div>
         </main>
       </body>
     </html>

@@ -1,7 +1,7 @@
-export default function Location ({ params }: { params: { id: string } }) {
+export default function Location () {
     return (
       <>
-        <h1>Location</h1>
+        <h1>Location page</h1>
       </>
     );
   }
