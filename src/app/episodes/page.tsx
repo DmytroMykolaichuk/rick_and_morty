@@ -2,7 +2,7 @@ import EpisodeView from "@/components/EpisodeView/EpisodeView";
 import css from './styles.module.css'
 
 export default async function Episodes() {
-  const episodes = await fetchSeasons(1);
+  const episodes = await fetchEpisodes(1);
   return (
       <>
       <h1>Episodes page</h1>
@@ -18,7 +18,7 @@ export default async function Episodes() {
     );
   }
 
-  async function fetchSeasons(page: number){
+  async function fetchEpisodes(page: number){
     const response = await fetch(`https://rickandmortyapi.com/api/episode/?page=${page}`);
     const { results } = await response.json();
     return results

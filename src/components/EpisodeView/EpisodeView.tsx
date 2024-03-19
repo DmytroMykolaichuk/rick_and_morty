@@ -11,7 +11,7 @@ interface EpisodeViewProps {
 export default function EpisodeView({name,id,date}: EpisodeViewProps) {
     return (
         <li className={css.episode_view}>
-          <Link href={`#`} className='link'>№{id} {name}</Link>
+          <Link href={`/episodes/${id}`} className='link'>№{id} {name}</Link>
           <span>{date}</span>
         </li>
       );

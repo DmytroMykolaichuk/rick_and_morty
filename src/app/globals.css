@@ -3,11 +3,13 @@
   margin: 0;
 }
 body{
-  font-size: 24px;
+  font-size: 20px;
   background-color: #92c84a;
   color: #218733;
 }
-
+ul{
+  list-style: none;
+}
 .container{
   padding: 0 20px 0 20px;
   max-width: 1800px;
