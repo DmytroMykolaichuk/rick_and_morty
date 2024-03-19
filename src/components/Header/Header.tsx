@@ -7,10 +7,10 @@ return(
         <header className={css.header}>
         <div className={css.heder_container}>
           <nav className={css.nav}>
-            <Link  className={css.link} href='/'>Home</Link>
-            <Link  className={css.link} href='/seasons'>Seasons</Link>
-            <Link  className={css.link} href='/characters'>Characters</Link>
-            <Link  className={css.link} href='/locations'>Locations</Link>
+            <Link  className={css.link} href='/'><strong>Home</strong></Link>
+            <Link  className={css.link} href='/episodes'><strong>Episodes</strong></Link>
+            <Link  className={css.link} href='/characters'><strong>Characters</strong></Link>
+            <Link  className={css.link} href='/locations'><strong>Locations</strong></Link>
           </nav>
         </div>
         <hr/>

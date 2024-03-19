@@ -12,7 +12,7 @@ export default function Home() {
       </p>
       
       <div className="error_btn flex">
-        <Link href='/qwerty' className="link link_error">Get Error ?¿?</Link>
+        <Link href='/qwerty' className="link link_error">Get Error ?¿?¿!!#@!</Link>
       </div>
     </>
   );
