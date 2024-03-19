@@ -1,9 +1,5 @@
+import { getEpisode,fetchEpisodes } from '@/Api/api';
 import css from './styles.module.css';
-
-interface Character {
-    id: number;
-    name: string;
-}
 
 export default async function EpisodeDetail({ params: { id } }: { params: { id: number } }) {
     const { name, air_date, episode, characters } = await getEpisode(id)
@@ -26,13 +22,10 @@ export default async function EpisodeDetail({ params: { id } }: { params: { id: 
     );
 }
 
-async function getEpisode(id: number) {
-    const response = await fetch(`https://rickandmortyapi.com/api/episode/${id}`);
-    const { name, air_date, episode, characters } = await response.json();
-
-    const fetchedCharacters: Character[] = await Promise.all(
-        characters.map((el: string) => fetch(el).then(response => response.json()))
-    );
-
-    return { name, air_date, episode, characters: fetchedCharacters }
-}
+export async function generateStaticParams() {
+    const episodes = await fetchEpisodes(1)
+   
+    return episodes.map((episode:Episode) => ({
+      slug: episode.id,
+    }))
+  }
