@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import css from './EpisodeView.module.css';
 
-interface EpisodeViewProps {
-  name: string;
-  id:number;
-  date:string;
-}
+
 
 
 export default function EpisodeView({name,id,date}: EpisodeViewProps) {

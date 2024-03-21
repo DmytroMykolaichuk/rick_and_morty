@@ -1,4 +1,4 @@
-interface Character {
+interface CharacterId {
     id: number;
     name: string;
 }
@@ -12,3 +12,28 @@ interface Episode {
     url: string;
     created: string;
 }
+interface EpisodeViewProps {
+    name: string;
+    id:number;
+    date:string;
+  }
+
+  interface CharacterProp {
+    id: number;
+    name: string;
+    status: string;
+    species: string;
+    type: string | null;
+    gender: string;
+    origin: LocationInfo;
+    location: LocationInfo;
+    image: string;
+    episode: string[];
+    url: string;
+    created: string;
+  }
+  
+  interface LocationInfo {
+    name: string;
+    url: string;
+  }

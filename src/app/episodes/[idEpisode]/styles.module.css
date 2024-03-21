@@ -51,3 +51,8 @@
     color:aliceblue;
     transform: scale(1.03);
 } */
+
+.link_charcter{
+    text-decoration: none;
+    color: inherit;
+}

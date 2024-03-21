@@ -1,0 +1,31 @@
+.backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color:#c3d7f1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.btn_close{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: #3fb2b6;
+    transition: all 200ms linear;
+}
+.btn_close:hover{
+    transform: scale(1.2);
+    color: #218733;
+}

@@ -1,0 +1,35 @@
+.section_character{
+    text-align: center;
+}
+.name{
+    display: inline-block;
+    padding:0 5px;
+    background-color: #218733;
+    color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.avatar{
+    margin:0 auto;
+}
+.wrap_info{
+    margin: 5px 0;
+    gap:5px;
+}
+.info_data{
+    background-color: #3fb2b6;
+    color: aliceblue;
+    border-radius: 10px;
+    padding:0 5px;
+    transition: all 200ms linear;
+}
+.info_data:hover{
+    background-color: #218733;
+    cursor: pointer;
+}
+.position_wrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 5px;
+}
