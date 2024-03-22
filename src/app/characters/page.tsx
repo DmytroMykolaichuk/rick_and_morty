@@ -1,7 +1,21 @@
-export default function Character() {
-    return (
+import { getInitialPages } from '@/Api/api';
+import ListCharacter from "@/components/ListCharacters/ListCharacter";
+
+export default async function CharacterPage() {
+
+  const data = await getInitialPages('character',1)
+
+  return (
       <>
-        <h1>Characte page</h1>
+        <ListCharacter characters={data} />
       </>
     );
+  }
+
+  export async function generateStaticParams() {
+    const episodes = await getInitialPages('character',1)
+   
+    return episodes.map((episode:CharacterProp) => ({
+      slug: episode.id,
+    }))
   }

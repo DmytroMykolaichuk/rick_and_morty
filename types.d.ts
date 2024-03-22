@@ -1,8 +1,3 @@
-interface CharacterId {
-    id: number;
-    name: string;
-}
-
 interface Episode {
     id: number;
     name: string;
@@ -37,3 +32,13 @@ interface EpisodeViewProps {
     name: string;
     url: string;
   }
+
+  interface Location {
+    id: number;
+    name: string;
+    type: string;
+    dimension: string;
+    residents: string[]; // Массив ссылок на персонажей
+    url: string;
+    created: string;
+}

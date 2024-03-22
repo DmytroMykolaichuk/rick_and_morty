@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import css from './EpisodeView.module.css';
+import css from './EpisodesViewList.module.css';
 
 
 
