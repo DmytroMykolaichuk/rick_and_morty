@@ -38,7 +38,7 @@ interface EpisodeViewProps {
     name: string;
     type: string;
     dimension: string;
-    residents: string[]; // Массив ссылок на персонажей
+    residents: string[];
     url: string;
     created: string;
 }
