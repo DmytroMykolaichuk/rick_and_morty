@@ -1,4 +1,4 @@
-import { getInitialPages } from "@/Api/api";
+import { getInitialPages } from "@/service/api";
 import EpisodesViewList from "@/components/EpisodesViewList/EpisodesViewList";
 import css from './styles.module.css'
 
@@ -19,11 +19,6 @@ export default async function Episodes() {
       </>
     );
   }
-  export async function generateStaticParams() {
-    const episodes = await getInitialPages('episode',1)
-    return episodes.map((episode:Episode) => ({
-      slug: episode.id,
-    }))
-  }
+
 
 

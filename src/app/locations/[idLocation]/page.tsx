@@ -1,5 +1,13 @@
-import { getLocation } from "@/Api/api";
+import { getLocation,getInitialPages } from "@/service/api";
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
+
+// export async function generateStaticParams() {
+//     const locations = await getInitialPages('location',1)
+   
+//     return locations.map((location:Location) => ({
+//       idLocation: location.id.toString(),
+//     }))
+//   }
 
 export default async function LocationDetail({params:{idLocation}}: {params:{idLocation:number}} ) {
     const { name,dimension,type, characters } = await getLocation(idLocation)

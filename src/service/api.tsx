@@ -4,7 +4,7 @@ export async function getInitialPages(endpoint:string,page: number){
 }
 
 
-export  async function getCharacter(id: number) {
+export  async function getCharacter(id: string) {
     const character = await fetch(`https://rickandmortyapi.com/api/character/${id}`).then(response => response.json());
     return character
 }

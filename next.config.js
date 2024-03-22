@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
+    // output: "export",
 images: {
     unoptimized: true,
 },
+// assetPrefix: './',
 // basePath: "/rick_and_morty"
 };
 module.exports = nextConfig
