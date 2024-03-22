@@ -1,5 +1,4 @@
 import { getEpisode } from '@/Api/api';
-import css from './styles.module.css';
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
 
 

@@ -1,5 +1,4 @@
 import { getLocation } from "@/Api/api";
-import css from './styles.module.css'
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
 
 export default async function LocationDetail({params:{idLocation}}: {params:{idLocation:number}} ) {
