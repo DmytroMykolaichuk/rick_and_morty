@@ -1,12 +1,9 @@
 import Image from "next/image";
 import css from './Character.module.css'
 import { CgArrowsExchangeAltV } from "react-icons/cg";
-import { getCharacter } from "@/service/api";
 
-export default async function Character({id}:{id:string}) {
 
-    const character = await getCharacter(id)
-
+export default function Character({character}:{character:CharacterProp}) {
     return(
     <section className={css.section_character}>
 

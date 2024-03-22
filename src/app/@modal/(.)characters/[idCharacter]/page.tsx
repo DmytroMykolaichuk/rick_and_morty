@@ -1,4 +1,4 @@
-// import { getCharacter,getInitialPages } from "@/service/api";
+import { getCharacter,getInitialPages } from "@/service/api";
 import Character from "@/components/Character/Character";
 import Modal from "@/components/Modal/Modal";
 
@@ -9,11 +9,12 @@ import Modal from "@/components/Modal/Modal";
 //     }))
 //   }
 
-export default async function CharacterPageModal({params:{idCharacter}}: {params:{idCharacter:string}} ){
+export default async function CharacterPageModal({params:{idCharacter}}: {params:{idCharacter:number}} ){
+    const character = await getCharacter(idCharacter)
     
     return(
     <Modal>  
-        <Character id={idCharacter}/>
+        <Character character={character}/>
     </Modal>  
     )
 }

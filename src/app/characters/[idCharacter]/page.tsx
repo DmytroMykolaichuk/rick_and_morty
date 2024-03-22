@@ -11,7 +11,7 @@ import type { Metadata } from 'next'
 //   }
 
 type Props = {
-    params: { idCharacter: string }
+    params: { idCharacter: number }
 }
 
 export async function generateMetadata(
@@ -31,11 +31,12 @@ export async function generateMetadata(
 
 
 
-export default async function CharacterDetail({params:{idCharacter}}: {params:{idCharacter:string}} ){
+export default async function CharacterDetail({params:{idCharacter}}: {params:{idCharacter:number}} ){
+    const character = await getCharacter(idCharacter)
     return(
     <div>
         <Modal>
-            <Character id={idCharacter}/>
+            <Character character={character}/>
         </Modal>  
     </div>  
     )
