@@ -9,7 +9,7 @@ export default function EpisodesViewList({characters}:{ characters: CharacterPro
         <ul className={css.list_characters}>
             {characters.map(({id,name}:{ id:number, name:string }) => (
                 <li key={id} className={css.episode_character}>
-                    <Link href={`/characters/${id}`} className={css.link_charcter}>{name}</Link>
+                    <Link href={`/characters/${id}`} className={css.link_charcter}>{name} </Link>
                 </li>
             ))}
         </ul>

@@ -28,4 +28,3 @@ export  async function getLocation(id: number) {
 
     return { name,dimension,type, characters: fetchedCharacters }
 }
-

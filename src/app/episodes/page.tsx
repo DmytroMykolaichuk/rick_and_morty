@@ -21,7 +21,6 @@ export default async function Episodes() {
   }
   export async function generateStaticParams() {
     const episodes = await getInitialPages('episode',1)
-   
     return episodes.map((episode:Episode) => ({
       slug: episode.id,
     }))

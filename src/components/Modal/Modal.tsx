@@ -21,10 +21,13 @@ export default function Modal({children}:{children:React.ReactNode}) {
     },[router])
 
 return(
-    <div className={css.backDrop} onClick={(e)=>{if(e.currentTarget===e.target)router.back()}}>
-        <div className={css.modal}>
-            <button type="button" onClick={()=>router.back()} className={`${css.btn_close} flex`}><IoCloseCircleSharp size={25}/></button>
-            {children}
+    // bug next scroll
+    <div>
+        <div className={css.backDrop} onClick={(e)=>{if(e.currentTarget===e.target)router.back()}}>
+            <div className={css.modal}>
+                <button type="button" onClick={()=>router.back()} className={`${css.btn_close} flex`}><IoCloseCircleSharp size={25}/></button>
+                {children}
+            </div>
         </div>
     </div>
 )

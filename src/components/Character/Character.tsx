@@ -9,7 +9,7 @@ export default function Character({character}:{character:CharacterProp}) {
 
         <h1 className={css.name}>{character.name}</h1>
 
-        <Image src={character.image} alt={character.name} width={300} height={300} className={css.avatar}/> 
+        <Image src={character.image} alt={character.name} width={300} height={300} className={css.avatar}  priority={true}/> 
 
         <div className={`flex ${css.wrap_info}`}>
             <div>Status: <span className={css.info_data}>{character.status}</span></div>
