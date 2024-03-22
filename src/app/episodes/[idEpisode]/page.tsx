@@ -1,7 +1,6 @@
 import { getEpisode } from '@/Api/api';
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
 
-
 export default async function EpisodeDetail({ params: { idEpisode } }: { params: { idEpisode: number } }) {
     const { name, air_date, episode, characters } = await getEpisode(idEpisode)
     return (
