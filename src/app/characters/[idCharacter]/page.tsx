@@ -2,6 +2,7 @@ import Character from "@/components/Character/Character";
 import Modal from "@/components/Modal/Modal";
 import { getCharacter } from "@/Api/api";
 
+
 export default async function CharacterDetail({params:{idCharacter}}: {params:{idCharacter:number}} ){
     const character = await getCharacter(idCharacter)
     return(
@@ -10,4 +11,3 @@ export default async function CharacterDetail({params:{idCharacter}}: {params:{i
     </Modal>    
     )
 }
-

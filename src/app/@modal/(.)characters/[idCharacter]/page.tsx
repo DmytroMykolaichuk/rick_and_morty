@@ -13,4 +13,3 @@ export default async function CharacterPageModal({params:{idCharacter}}: {params
     </Modal>  
     )
 }
-
