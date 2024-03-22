@@ -4,7 +4,7 @@ const nextConfig = {
 images: {
     unoptimized: true,
 },
-basePath: "/rick_and_morty"
+// basePath: "/rick_and_morty"
 };
 
 export default nextConfig;
