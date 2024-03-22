@@ -33,9 +33,9 @@ export default async function CharacterDetail({params:{idCharacter}}: {params:{i
     )
 }
 
-export async function generateStaticParams() {
-    const episodes = await getInitialPages('character',1)
-    return episodes.map((episode:CharacterProp) => ({
-        slug: episode.id,
-    }))
-  }
+// export async function generateStaticParams() {
+//     const episodes = await getInitialPages('character',1)
+//     return episodes.map((episode:CharacterProp) => ({
+//         slug: episode.id,
+//     }))
+//   }
