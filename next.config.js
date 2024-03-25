@@ -6,7 +6,7 @@ images: {
 },
 reactStrictMode: true,
 
-assetPrefix: './',
+// assetPrefix: './',
 basePath: "/rick_and_morty"
 };
 module.exports = nextConfig
