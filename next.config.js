@@ -4,8 +4,10 @@ const nextConfig = {
 images: {
     unoptimized: true,
 },
+reactStrictMode: true,
+
 // assetPrefix: './',
-basePath: "/rick_and_morty/src"
+basePath: "/rick_and_morty"
 };
 module.exports = nextConfig
 // export default nextConfig;
