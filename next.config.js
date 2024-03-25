@@ -4,7 +4,7 @@ const nextConfig = {
 images: {
     unoptimized: true,
 },
-reactStrictMode: true,
+// reactStrictMode: true,
 
 // assetPrefix: './',
 basePath: "/rick_and_morty"
