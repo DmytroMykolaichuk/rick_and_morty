@@ -1,13 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: "export",
-images: {
-    unoptimized: true,
-},
-// reactStrictMode: true,
-
-// assetPrefix: './',
-basePath: "/rick_and_morty"
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rickandmortyapi.com', 
+        port: '',
+        pathname: '/api/character/avatar/**', 
+      },
+    ],
+  },
 };
-module.exports = nextConfig
-// export default nextConfig;
+
+module.exports = nextConfig;

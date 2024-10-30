@@ -6,7 +6,7 @@
     padding: 20px ;
     max-width: 1800px;
     margin: 0 auto;
-    background-image: url('../../img/portal.jpg');
+    background-image: url('../../../public/img/portal.jpg');
     background-repeat:no-repeat;
     background-position:right center;
     background-size:400px;

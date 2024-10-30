@@ -1,14 +1,9 @@
-import { getEpisode,getInitialPages } from '@/service/api';
+import { getEpisode } from '@/service/api';
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
+import React from 'react';
 
-// export async function generateStaticParams() {
-//     const episodes = await getInitialPages('episode',1)
-//     return episodes.map((episode:Episode) => ({
-//       idEpisode: episode.id.toString(),
-//     }))
-//   }
 
-export default async function EpisodeDetail({ params: { idEpisode } }: { params: { idEpisode: number } }) {
+export default async function EpisodeDetail({ params: { idEpisode } }: { params: { idEpisode: number } }): Promise<React.ReactNode> {
     const { name, air_date, episode, characters } = await getEpisode(idEpisode)
     return (
         <section className='section_detail'>
