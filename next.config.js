@@ -11,9 +11,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'rickandmortyapi.com', 
+        hostname: 'rickandmortyapi.com',
         port: '',
-        pathname: '/api/character/avatar/**', 
+        pathname: '/api/**',
       },
     ],
   },
