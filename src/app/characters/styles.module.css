@@ -8,9 +8,13 @@
   border: 2px dashed #218733;
   color: #218733;
   background-color: transparent;
+
+  box-shadow: rgba(33, 135, 51, 0.4) 0px 5px, rgba(33, 135, 51, 0.3) 0px 10px,
+    rgba(33, 135, 51, 0.2) 0px 15px, rgba(33, 135, 51, 0.1) 0px 20px,
+    rgba(33, 135, 51, 0.05) 0px 25px;
 }
 
 .eye {
-  color: red;
+  color: rgb(205, 70, 70);
   font-size: 30px;
 }

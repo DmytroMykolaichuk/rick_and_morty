@@ -9,7 +9,6 @@ export async function getInitialPages(endpoint: string, page: number) {
   const { results } = await fetch(
     `https://rickandmortyapi.com/api/${endpoint}/?page=${page}`
   ).then(response => response.json());
-  console.log(results);
   return results;
 }
 

@@ -30,9 +30,10 @@ export default function CharacterPage() {
         type="button"
         onClick={() => setPage(prev => prev + 1)}
         className={css.button}
+        disabled={page === 42}
       >
         <span className={css.eye}>👁 </span>
-        more
+        {page === 42 ? 'finish' : 'more'}
         <span className={css.eye}> 👁</span>
       </button>
     </>
