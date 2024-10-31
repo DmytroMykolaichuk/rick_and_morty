@@ -1,15 +1,40 @@
+'use client';
 import { getInitialPages } from '@/service/api';
-import ListCharacter from "@/components/ListCharacters/ListCharacter";
+import ListCharacter from '@/components/ListCharacters/ListCharacter';
+import { useEffect, useState } from 'react';
+import css from './styles.module.css';
 
-export default async function CharacterPage() {
+export default function CharacterPage() {
+  const [page, setPage] = useState(1);
+  const [characters, setCharacters] = useState<CharacterProp[]>([]);
 
-  const data = await getInitialPages('character',1)
+  useEffect(() => {
+    let isMounted = true;
+    async function getMoreCharacters() {
+      if (isMounted) {
+        const data = await getInitialPages('character', page);
+        setCharacters(prev => [...prev, ...data]);
+      }
+    }
+    getMoreCharacters();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [page]);
 
   return (
-      <>
-        <ListCharacter characters={data} />
-      </>
-    );
-  }
-
-
+    <>
+      <ListCharacter characters={characters} />
+      <button
+        type="button"
+        onClick={() => setPage(prev => prev + 1)}
+        className={css.button}
+      >
+        <span className={css.eye}>👁 </span>
+        more
+        <span className={css.eye}> 👁</span>
+      </button>
+    </>
+  );
+}

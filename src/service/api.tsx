@@ -1,7 +1,15 @@
+export async function getSeasons(id: Array<number>) {
+  const result = await fetch(
+    `https://rickandmortyapi.com/api/episode/${id}`
+  ).then(response => response.json());
+  return result;
+}
+
 export async function getInitialPages(endpoint: string, page: number) {
   const { results } = await fetch(
     `https://rickandmortyapi.com/api/${endpoint}/?page=${page}`
   ).then(response => response.json());
+  console.log(results);
   return results;
 }
 

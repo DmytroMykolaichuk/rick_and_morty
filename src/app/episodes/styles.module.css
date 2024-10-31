@@ -1,6 +1,8 @@
-.list_view_episode{
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 50px;
+.container_season {
+  display: flex;
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }

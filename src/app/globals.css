@@ -1,30 +1,30 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-body{
+body {
   font-size: 20px;
   background-color: #92c84a;
   color: #218733;
 }
-ul{
+ul {
   list-style: none;
 }
-img{
+img {
   display: block;
 }
-.container{
-  padding: 0 20px 0 20px;
+.container {
+  padding: 0 20px 40px 20px;
   max-width: 1800px;
   margin: 0 auto;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.link{
+.link {
   white-space: nowrap;
   text-decoration: none;
   color: aliceblue;
@@ -34,24 +34,24 @@ img{
   transition: all 300ms linear;
   padding: 0 10px;
 }
-.link:hover{
-  color:#218733;
+.link:hover {
+  color: #218733;
   background-color: aliceblue;
 }
 
-.error_btn{
+.error_btn {
   margin-top: 15px;
 }
-.wrapper404{
+.wrapper404 {
   position: relative;
   width: 100%;
   background-color: #010103;
 }
-.img_404{
+.img_404 {
   width: 600px;
   height: 100%;
 }
-.error_404{
+.error_404 {
   position: absolute;
   top: 65%;
   left: 47%;
@@ -62,21 +62,21 @@ img{
   padding: 2px 20px;
 }
 
-.section_detail{
+.section_detail {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
 }
 
-.wrapper_info{
+.wrapper_info {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 20px;
 }
 
-.detail_info{ 
+.detail_info {
   padding: 0 10px;
   color: aliceblue;
   background-color: #3fb2b6;
