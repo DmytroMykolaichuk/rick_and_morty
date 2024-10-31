@@ -2,40 +2,26 @@
 import { getInitialPages } from '@/service/api';
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
 import { useEffect, useState } from 'react';
-import css from './styles.module.css';
+import BtnMore from '@/components/BtnMore/BtnMore';
 
 export default function CharacterPage() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number>(1);
   const [characters, setCharacters] = useState<CharacterProp[]>([]);
+  const [maxPage, setMaxPage] = useState<number>(2);
 
   useEffect(() => {
-    let isMounted = true;
     async function getMoreCharacters() {
-      if (isMounted) {
-        const data = await getInitialPages('character', page);
-        setCharacters(prev => [...prev, ...data]);
-      }
+      const { results, info } = await getInitialPages('character', page);
+      setCharacters(prev => [...prev, ...results]);
+      if (maxPage != info.pages) setMaxPage(info.pages);
     }
     getMoreCharacters();
-
-    return () => {
-      isMounted = false;
-    };
   }, [page]);
 
   return (
     <>
       <ListCharacter characters={characters} />
-      <button
-        type="button"
-        onClick={() => setPage(prev => prev + 1)}
-        className={css.button}
-        disabled={page === 42}
-      >
-        <span className={css.eye}>👁 </span>
-        {page === 42 ? 'finish' : 'more'}
-        <span className={css.eye}> 👁</span>
-      </button>
+      <BtnMore maxPage={maxPage} page={page} setPage={setPage} />
     </>
   );
 }
