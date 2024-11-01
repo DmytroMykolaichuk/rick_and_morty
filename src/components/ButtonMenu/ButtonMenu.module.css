@@ -1,0 +1,15 @@
+.listType {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.btnType {
+  padding: 5px 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  font-size: 20px;
+  font-family: inherit;
+}

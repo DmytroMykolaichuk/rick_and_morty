@@ -20,7 +20,11 @@ export default function CharacterPage() {
 
   return (
     <>
-      <ListCharacter characters={characters} />
+      <ListCharacter
+        characters={characters}
+        url="characters"
+        title="Characters"
+      />
       <BtnMore maxPage={maxPage} page={page} setPage={setPage} />
     </>
   );

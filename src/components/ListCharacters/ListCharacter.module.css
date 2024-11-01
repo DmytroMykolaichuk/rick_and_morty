@@ -1,30 +1,29 @@
-.list_characters{
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.list_characters {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.episode_character{
-    padding: 0 10px;
-    color: #cedf50;
-    border-radius: 20px;
-    transition: all 200ms linear;
+.episode_character {
+  padding: 0 10px;
+  color: #cedf50;
+  border-radius: 20px;
+  transition: all 200ms linear;
 }
 
 .episode_character:nth-child(even) {
-    background-color: #3fb2b6;
+  background-color: #3fb2b6;
 }
 .episode_character:nth-child(odd) {
-    background-color: #218733;
+  background-color: #218733;
 }
 
-.episode_character:hover{
-    color:#218733;
-    background-color: aliceblue;
-    transform: scale(1.03);
+.episode_character:hover {
+  color: #218733;
+  background-color: aliceblue;
+  transform: scale(1.03);
 }
-
 
 /* 
 .episode_character:nth-child(odd):hover{
@@ -32,7 +31,7 @@
     transform: scale(1.03);
 } */
 
-.link_charcter{
-    text-decoration: none;
-    color: inherit;
+.link_charcter {
+  text-decoration: none;
+  color: inherit;
 }

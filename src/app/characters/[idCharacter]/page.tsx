@@ -1,6 +1,6 @@
 import Character from '@/components/Character/Character';
 import Modal from '@/components/Modal/Modal';
-import { getCharacter, getInitialPages } from '@/service/api';
+import { getCharacter } from '@/service/api';
 import type { Metadata } from 'next';
 
 type Props = {

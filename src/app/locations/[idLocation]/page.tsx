@@ -1,13 +1,5 @@
-import { getLocation, getInitialPages } from '@/service/api';
+import { getLocation } from '@/service/api';
 import ListCharacter from '@/components/ListCharacters/ListCharacter';
-
-// export async function generateStaticParams() {
-//     const locations = await getInitialPages('location',1)
-
-//     return locations.map((location:Location) => ({
-//       idLocation: location.id.toString(),
-//     }))
-//   }
 
 export default async function LocationDetail({
   params: { idLocation },
@@ -22,7 +14,11 @@ export default async function LocationDetail({
         <h1>{name}</h1>
         <span className="detail_info">Type:{type}</span>
       </div>
-      <ListCharacter characters={characters} />
+      <ListCharacter
+        characters={characters}
+        url="characters"
+        title="Characters"
+      />
     </section>
   );
 }

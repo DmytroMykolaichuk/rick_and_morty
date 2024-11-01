@@ -15,7 +15,11 @@ export default async function EpisodeDetail({
         <h1>{name}</h1>
         <span className="detail_info">{air_date}</span>
       </div>
-      <ListCharacter characters={characters} />
+      <ListCharacter
+        characters={characters}
+        title="Characters"
+        url="characters"
+      />
     </section>
   );
 }
