@@ -1,6 +1,7 @@
 import React from 'react';
 import Season from '@/components/Saeason/Season';
 import css from './styles.module.css';
+import Soon from '@/components/Soon/Soon';
 
 export default function Episodes(): React.ReactNode {
   const seasons = [
@@ -18,7 +19,7 @@ export default function Episodes(): React.ReactNode {
         {seasons.map((el, index) => (
           <Season season={index + 1} series={el} key={index} />
         ))}
-        <div style={{ width: 'calc(50% - 20px)' }}>Більше немає</div>
+        <Soon />
       </div>
     </section>
   );
