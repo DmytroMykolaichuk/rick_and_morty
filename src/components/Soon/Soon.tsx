@@ -2,7 +2,7 @@ import React from 'react';
 import css from './Soon.module.css';
 
 export default function Soon(): React.ReactNode {
-  const text = '🤸Це Все Що Є На Ресурсі🤸‍♂️';
+  const text = '🤸Це Все Що Поки Є На Ресурсі🤸‍♂️ API';
 
   return (
     <div className={css.container}>
@@ -25,9 +25,7 @@ export default function Soon(): React.ReactNode {
             <circle cx="150" cy="150" r="60" fill="none" />
             <g>
               <text fill="#218733">
-                <textPath href="#circlePath" startOffset="50%">
-                  {text}
-                </textPath>
+                <textPath href="#circlePath">{text}</textPath>
               </text>
             </g>
           </svg>
