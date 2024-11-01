@@ -12,7 +12,7 @@ export default function CharacterPage() {
   useEffect(() => {
     async function getMoreCharacters() {
       const { results, info } = await getInitialPages('character', page);
-      setCharacters(prev => [...prev, ...results]);
+      setCharacters(prev => [...prev, ...(results as CharacterProp[])]);
       if (maxPage != info.pages) setMaxPage(info.pages);
     }
     getMoreCharacters();

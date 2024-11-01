@@ -13,7 +13,7 @@ export default function Location() {
     const getAllLocations = async () => {
       try {
         const { info, results } = await getInitialPages('location', 1);
-        const allLocations = [...results];
+        const allLocations = [...(results as Location[])];
 
         const requests = Array.from({ length: info.pages - 1 }, (_, i) =>
           getInitialPages('location', i + 2)
@@ -21,7 +21,9 @@ export default function Location() {
 
         const responses = await Promise.all(requests);
 
-        responses.forEach(({ results }) => allLocations.push(...results));
+        responses.forEach(({ results }) =>
+          allLocations.push(...(results as Location[]))
+        );
         setLocations(allLocations);
       } catch (error) {
         console.error('Error fetching locations:', error);
